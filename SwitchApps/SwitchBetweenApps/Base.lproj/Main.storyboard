@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uJ2-vk-0IO">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SwitchApps-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwitchBetweenApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPB-DP-hQ3">
+                                <color key="backgroundColor" red="1" green="0.70398808280000003" blue="0.1973231902" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="跳转"/>
+                                <connections>
+                                    <action selector="go" destination="BYZ-38-t0r" eventType="touchUpInside" id="xVt-HH-48I"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="跳转url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vvI-ju-f7h">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vvI-ju-f7h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7GD-cF-KP1"/>
+                            <constraint firstItem="vvI-ju-f7h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="B0H-9v-VV6"/>
+                            <constraint firstAttribute="trailing" secondItem="vvI-ju-f7h" secondAttribute="trailing" constant="10" id="Etm-uG-ghe"/>
+                            <constraint firstItem="KPB-DP-hQ3" firstAttribute="top" secondItem="vvI-ju-f7h" secondAttribute="bottom" constant="20" id="oRE-hf-qpe"/>
+                            <constraint firstItem="KPB-DP-hQ3" firstAttribute="leading" secondItem="vvI-ju-f7h" secondAttribute="leading" id="pHu-7B-jpo"/>
+                            <constraint firstItem="KPB-DP-hQ3" firstAttribute="trailing" secondItem="vvI-ju-f7h" secondAttribute="trailing" id="shw-9f-2z6"/>
+                            <constraint firstItem="vvI-ju-f7h" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="srG-Uc-Ghk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="SwitchApps" id="fDW-HD-9MN"/>
+                    <connections>
+                        <outlet property="urlTextField" destination="vvI-ju-f7h" id="wzz-TM-6su"/>
+                        <segue destination="Ive-7u-sJL" kind="show" identifier="toFriends" id="iyg-iD-RP1"/>
+                        <segue destination="ZeH-x2-rex" kind="show" identifier="toChats" id="VIH-03-YNU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="-53"/>
+        </scene>
+        <!--Friends-->
+        <scene sceneID="S0p-71-HE6">
+            <objects>
+                <viewController title="Friends" id="Ive-7u-sJL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Thw-SQ-Qvd"/>
+                        <viewControllerLayoutGuide type="bottom" id="qqZ-Wu-abX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Nf-0p-HJk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ziH-us-6pJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900" y="-375"/>
+        </scene>
+        <!--Chats-->
+        <scene sceneID="sPk-Tv-0KA">
+            <objects>
+                <viewController title="Chats" id="ZeH-x2-rex" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fFk-cI-q7y"/>
+                        <viewControllerLayoutGuide type="bottom" id="mIB-ps-utG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Zk-U4-xsf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qNy-Hs-m4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900" y="300"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Rfl-fc-ayV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uJ2-vk-0IO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vFE-qJ-9gk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vVo-wJ-Kwl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PBW-DT-eTy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
